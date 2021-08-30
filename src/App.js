@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import "./App.css";
 import { useState } from "react";
 
@@ -41,7 +42,7 @@ function App() {
   };
 
   let putNumerics = function (value) {
-    if (prev == "ANS") {
+    if (prev === "ANS") {
       setOldExpression("Ans = " + expression);
       setExpression(value);
     } else {
@@ -51,7 +52,7 @@ function App() {
   };
 
   let putOperator = function (value) {
-    if (prev != "OP") {
+    if (prev !== "OP") {
       setExpression(expression + value);
     } else {
       setExpression(expression.slice(0, -1) + value);
